@@ -32,11 +32,13 @@ node scripts/render.mjs --check notes.md
 
 ## Use as a skill
 
-Install with the [Skills CLI](https://github.com/vercel-labs/skills), using a supported Node version for that CLI:
+Install with the [Skills CLI](https://github.com/vercel-labs/skills), which requires **Node.js 22.20+**. The local Pele renderer itself requires Node.js 20+.
 
 ```sh
 npx skills add KRPCT/run-pele --skill run-pele
 ```
+
+Preview discovery with `npx skills add KRPCT/run-pele --list`, or open the [skills.sh detail page](https://skills.sh/krpct/run-pele/run-pele). [Installation verification](validation/skills-cli.json) covers the public-repository install and the installed runtime.
 
 Choose the client and installation scope in the installer. The renderer dependency is restored with `npm ci --ignore-scripts --no-audit --no-fund` from the installed skill directory when needed.
 

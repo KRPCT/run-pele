@@ -1,0 +1,52 @@
+{
+  "verifiedDate": "2026-10-26",
+  "source": "KRPCT/run-pele",
+  "sourceCommit": "26fc1c4fdabcf57454d3adba31ff59dc8401dd0c",
+  "cli": {
+    "package": "skills",
+    "version": "1.7.4",
+    "node": "24.19.0"
+  },
+  "discovery": {
+    "command": "npx skills@1.7.4 add KRPCT/run-pele --list",
+    "skillCount": 1,
+    "name": "run-pele",
+    "sourcePath": "SKILL.md",
+    "exitCode": 0
+  },
+  "installation": {
+    "command": "npx skills@1.7.4 add KRPCT/run-pele --skill run-pele --agent codex --copy --yes",
+    "scope": "project",
+    "agent": "codex",
+    "method": "copy",
+    "exitCode": 0,
+    "requiredFiles": [
+      "SKILL.md",
+      "package.json",
+      "package-lock.json",
+      "scripts/render.mjs",
+      "scripts/render-worker.mjs",
+      "scripts/verify.mjs",
+      "scripts/showcase.mjs",
+      "assets/examples.json",
+      "assets/theme.css",
+      "examples/showcase.json",
+      "references/syntax.md"
+    ],
+    "skillSha256": "b3d25d3c1f1a260efec828980e3f555639faa9e32cd4e4b3493c65a86677b259",
+    "matchesPublishedSkill": true
+  },
+  "installedRuntime": {
+    "installCommand": "npm ci --ignore-scripts --no-audit --no-fund",
+    "verifyCommand": "node scripts/verify.mjs",
+    "exitCodes": [
+      0,
+      0
+    ],
+    "pele": "1.10.0",
+    "types": 33,
+    "corpusRenderCalls": 1182,
+    "showcaseRenderCalls": 24
+  },
+  "scopeNote": "Confirms repository discovery, file installation and execution. Directory search indexing is a separate service-side process."
+}

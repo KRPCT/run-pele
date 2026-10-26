@@ -10,6 +10,7 @@
   <a href="#快速开始">快速开始</a> ·
   <a href="#案例导航">案例导航</a> ·
   <a href="SKILL.md">技能入口</a> ·
+  <a href="https://skills.sh/krpct/run-pele/run-pele">skills.sh</a> ·
   <a href="references/syntax.md">语法参考</a> ·
   <a href="README.en.md">English</a>
 </p>
@@ -54,11 +55,13 @@ node scripts/render.mjs --check notes.md
 
 渲染器使用锁文件中的精确版本。脚本不上传源码、不启动服务器，默认保护已有输出；确需替换时加 `--force`。
 
-作为 skill 使用，可通过 [Skills CLI](https://github.com/vercel-labs/skills) 安装；该 CLI 有自己的 Node 版本要求：
+作为 skill 使用，可通过 [Skills CLI](https://github.com/vercel-labs/skills) 安装。Skills CLI 需要 **Node.js 22.20+**；本地 Pele 渲染脚本需要 Node.js 20+。
 
 ```sh
 npx skills add KRPCT/run-pele --skill run-pele
 ```
+
+安装前可运行 `npx skills add KRPCT/run-pele --list`，确认发现 `run-pele`。[skills.sh 详情页](https://skills.sh/krpct/run-pele/run-pele)提供同一来源的安装入口。
 
 安装器中选择客户端和作用域。依赖缺失时，从安装后的技能目录运行 `npm ci --ignore-scripts --no-audit --no-fund`。
 
@@ -338,6 +341,8 @@ npm run verify
 - 展示图记录源文件、输出文件、Pele 版本、尺寸和 SHA-256；Gantt 的参考时间固定，便于复现。
 
 [展示图清单](assets/readme/manifest.json) · [验证摘要](validation/summary.json) · [来源与覆盖](references/sources.md)
+
+[Skills CLI 安装验证](validation/skills-cli.json)记录从公开仓库发现、复制安装及安装后运行检查的结果。
 
 这些检查不等同于全部上游测试或安全认证；591 个语料示例没有逐一完成目视审查。Node 字宽估计、浏览器字体和 PNG/PDF 导出仍需按目标环境核对。
 

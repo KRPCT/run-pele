@@ -1,0 +1,27 @@
+stateDiagram-v2
+  direction TB
+  [*] --> Trial
+  state "试用" as Trial
+  state "有效订阅" as Active {
+    [*] --> Ready
+    state "可正常使用" as Ready
+    state "正在续费" as Renewing
+    Ready --> Renewing: 到达账期
+    Renewing --> Ready: 扣款成功
+  }
+  state "宽限期" as Grace
+  state "已暂停" as Suspended
+  state "待到期取消" as ScheduledCancel
+  state "已结束" as Ended
+  Trial --> Active: 首次付款
+  Trial --> Ended: 试用到期
+  Active --> Grace: 扣款失败
+  Grace --> Active: 补款成功
+  Grace --> Suspended: 超过宽限期
+  Suspended --> Active: 恢复付款
+  Active --> ScheduledCancel: 用户取消续费
+  ScheduledCancel --> Active: 撤销取消
+  ScheduledCancel --> Ended: 当前账期结束
+  Suspended --> Ended: 超过保留期
+  Ended --> [*]
+  note right of Grace: 保留只读访问\n限制新增资源

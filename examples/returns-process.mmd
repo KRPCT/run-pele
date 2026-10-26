@@ -1,0 +1,28 @@
+swimlane-beta TB
+  accTitle: 退货、验收与退款的跨部门流程
+  accDescr: 客户发起退货后，客服确认资格，仓库验收商品，财务退款；不符合条件的申请进入说明和申诉路径。
+  subgraph Customer [客户]
+    request[申请退货]
+    send[寄回商品]
+    receive[收到退款]
+  end
+  subgraph Support [客服]
+    eligibility{符合规则}
+    label[提供退货单]
+    explain[说明原因]
+  end
+  subgraph Warehouse [仓库]
+    inspect{验收通过}
+    restock[商品入库]
+    exception[记录异常]
+  end
+  subgraph Finance [财务]
+    calculate[计算退款]
+    refund[原路退款]
+  end
+  request --> eligibility
+  eligibility -->|是| label
+  eligibility -->|否| explain
+  label --> send --> inspect
+  inspect -->|是| restock --> calculate --> refund --> receive
+  inspect -->|否| exception --> explain

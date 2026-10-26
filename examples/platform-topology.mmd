@@ -1,0 +1,36 @@
+architecture-beta
+  group edge(internet)[入口层]
+    service gateway(internet)[API 网关] in edge
+    service auth(server)[身份认证] in edge
+  group domain(cloud)[业务服务]
+    service orders(server)[订单服务] in domain
+    service payments(server)[支付服务] in domain
+    service inventory(server)[库存服务] in domain
+    service notices(server)[通知服务] in domain
+  group data(database)[数据与事件]
+    service orderdb(database)[订单库] in data
+    service ledger(database)[支付账本] in data
+    service stockdb(database)[库存库] in data
+    service bus(server)[事件总线] in data
+  group ops(disk)[可观测性]
+    service traces(disk)[链路追踪] in ops
+    service audit(disk)[审计日志] in ops
+  gateway:R -- L:auth
+  gateway:B --> T:orders
+  orders:R --> L:payments
+  payments:R --> L:inventory
+  inventory:R --> L:notices
+  orders:B --> T:orderdb
+  payments:B --> T:ledger
+  inventory:B --> T:stockdb
+  notices:B --> T:bus
+  bus:B --> T:traces
+  traces:R -- L:audit
+  align row gateway auth
+  align row orders payments inventory notices
+  align row orderdb ledger stockdb bus
+  align row traces audit
+  align column gateway orders orderdb traces
+  align column payments ledger
+  align column inventory stockdb
+  align column notices bus

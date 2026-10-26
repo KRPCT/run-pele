@@ -12,6 +12,7 @@ description: 使用 Pele（pele.run / obsidianmd/pele）编写、校验和渲染
 | 当前任务 | 按需读取 |
 | --- | --- |
 | 选图、编写或修复语法 | [语法与图型](references/syntax.md)，再按需查询示例 |
+| 多分支流程、跨服务交互或完整业务案例 | [复杂案例清单](examples/showcase.json)，读取对应 `examples/*.mmd` 后改写 |
 | 文件输出、批量校验、CI | [本地命令](references/local-cli.md) |
 | Node、浏览器、组件、按需加载、数学 | [API 与集成](references/api-and-integration.md) |
 | 颜色、字体、导出、窄屏 | [主题与布局](references/theming-and-layout.md) |

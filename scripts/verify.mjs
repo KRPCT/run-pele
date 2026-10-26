@@ -9,6 +9,7 @@ import { render, parse, supports, PeleError, detectType } from 'pele';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const cli = fileURLToPath(new URL('./render.mjs', import.meta.url));
 const catalog = JSON.parse(await readFile(new URL('../assets/examples.json', import.meta.url), 'utf8'));
+const showcase = JSON.parse(await readFile(new URL('../examples/showcase.json', import.meta.url), 'utf8'));
 const packageInfo = JSON.parse(await readFile(new URL('../node_modules/pele/package.json', import.meta.url), 'utf8'));
 const temporary = await mkdtemp(join(tmpdir(), 'run-pele-verify-'));
 const checks = [];
@@ -36,6 +37,17 @@ try {
   const declared = (await readdir(new URL('../node_modules/pele/dist/entries/', import.meta.url))).filter(name => name.endsWith('.d.ts')).map(name => name.slice(0, -5));
   assert.deepEqual([...types].sort(), declared.sort());
   checks.push(`All ${catalog.examples.length} captured examples render at natural width and 320 px; all ${types.size} installed diagram types represented`);
+
+  for (const entry of showcase) {
+    const source = await readFile(new URL(`../examples/${entry.id}.mmd`, import.meta.url), 'utf8');
+    for (const maxWidth of [undefined, 320]) {
+      const result = render(source, { idPrefix: `case-${entry.id}`, links: false, images: false, now: new Date('2026-10-26T00:00:00Z'), ...(maxWidth ? { maxWidth } : {}) });
+      assert.equal(result.type, entry.type, entry.id);
+      assert(Number.isFinite(result.width) && result.width > 0);
+      assert(Number.isFinite(result.height) && result.height > 0);
+    }
+  }
+  checks.push(`All ${showcase.length} detailed showcase scenarios render at natural width and 320 px`);
 
   const broken = 'flowchart TD\n A[broken --> B';
   assert.equal(supports(broken), true);
@@ -87,7 +99,7 @@ try {
   const timeout = run([cli, input, join(temporary, 'timeout.svg'), '--timeout-ms', '1'], 1);
   assert.equal(JSON.parse(timeout.stderr).code, 'timeout');
   checks.push('Markdown extraction avoids nested examples, maps error lines, rejects empty work and terminates an expired render worker');
-  console.log(JSON.stringify({ ok: true, pele: packageInfo.version, types: types.size, examples: catalog.examples.length, renderCalls: catalog.examples.length * 2, checks }, null, 2));
+  console.log(JSON.stringify({ ok: true, pele: packageInfo.version, types: types.size, examples: catalog.examples.length, renderCalls: catalog.examples.length * 2, showcaseScenarios: showcase.length, showcaseRenderCalls: showcase.length * 2, checks }, null, 2));
 } finally {
   await rm(temporary, { recursive: true, force: true });
 }

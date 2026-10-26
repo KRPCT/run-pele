@@ -1,0 +1,25 @@
+gitGraph
+  commit id: "v1.0"
+  branch develop
+  checkout develop
+  commit id: "next"
+  branch feature-a
+  commit id: "contract"
+  commit id: "implementation"
+  checkout develop
+  branch feature-b
+  commit id: "schema"
+  checkout feature-a
+  commit id: "tests"
+  checkout develop
+  merge feature-a id: "merge-a"
+  merge feature-b id: "merge-b"
+  checkout main
+  branch hotfix
+  commit id: "critical-fix" type: HIGHLIGHT
+  checkout main
+  merge hotfix id: "v1.0.1" tag: "v1.0.1"
+  checkout develop
+  merge hotfix id: "backport"
+  checkout main
+  merge develop id: "v1.1" tag: "v1.1.0"

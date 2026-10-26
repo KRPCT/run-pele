@@ -1,0 +1,53 @@
+erDiagram
+  CUSTOMER ||--o{ ORDER : places
+  ORDER ||--|{ ORDER_ITEM : contains
+  PRODUCT ||--o{ ORDER_ITEM : references
+  ORDER ||--o{ PAYMENT : receives
+  ORDER ||--o{ SHIPMENT : fulfills
+  PAYMENT ||--o{ REFUND : reverses
+  CUSTOMER {
+    uuid id PK
+    string email UK
+    string display_name
+    datetime created_at
+  }
+  ORDER {
+    uuid id PK
+    uuid customer_id FK
+    string status
+    decimal total_amount
+    string currency
+    string idempotency_key UK
+  }
+  ORDER_ITEM {
+    uuid id PK
+    uuid order_id FK
+    uuid product_id FK
+    int quantity
+    decimal unit_price
+  }
+  PRODUCT {
+    uuid id PK
+    string sku UK
+    string name
+    decimal list_price
+  }
+  PAYMENT {
+    uuid id PK
+    uuid order_id FK
+    string provider_reference UK
+    decimal amount
+    string status
+  }
+  SHIPMENT {
+    uuid id PK
+    uuid order_id FK
+    string tracking_number
+    string status
+  }
+  REFUND {
+    uuid id PK
+    uuid payment_id FK
+    decimal amount
+    string reason
+  }

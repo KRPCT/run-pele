@@ -1,0 +1,35 @@
+requirementDiagram
+  requirement auditability {
+    id: R1
+    text: Record every payment decision
+    risk: high
+    verifymethod: test
+  }
+  requirement recovery {
+    id: R2
+    text: Recover interrupted payment processing
+    risk: high
+    verifymethod: demonstration
+  }
+  requirement duplicate_safety {
+    id: R3
+    text: Prevent duplicate financial effects
+    risk: high
+    verifymethod: test
+  }
+  element audit_log {
+    type: service
+    docref: "audit-contract"
+  }
+  element retry_worker {
+    type: worker
+    docref: "recovery-playbook"
+  }
+  element idempotency_store {
+    type: database
+    docref: "payment-contract"
+  }
+  audit_log - satisfies -> auditability
+  retry_worker - satisfies -> recovery
+  idempotency_store - satisfies -> duplicate_safety
+  recovery - traces -> duplicate_safety

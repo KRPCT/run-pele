@@ -1,0 +1,23 @@
+.pele {
+  --pele-bg: #fcfcfa;
+  --pele-fg: #242a32;
+  --pele-muted: #69737f;
+  --pele-line: #566170;
+  --pele-surface: #f0f3f6;
+  --pele-surface-alt: #e8edf1;
+  --pele-border: #a3afba;
+  --pele-accent: #c95d43;
+  --pele-critical: #c95d43;
+  --pele-error: #b84736;
+  --pele-series-1: #4e739c;
+  --pele-series-2: #d17956;
+  --pele-series-3: #57917e;
+  --pele-series-4: #b55f6b;
+  --pele-series-5: #8a7ca8;
+  --pele-series-6: #ba9b50;
+  --pele-series-7: #6d9fa2;
+  --pele-series-8: #87919d;
+  --pele-radius: 7px;
+  --pele-heading-weight: 600;
+  --pele-title-weight: 600;
+}

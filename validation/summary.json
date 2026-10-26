@@ -4,8 +4,11 @@
   "types": 33,
   "examples": 591,
   "renderCalls": 1182,
+  "showcaseScenarios": 12,
+  "showcaseRenderCalls": 24,
   "checks": [
     "All 591 captured examples render at natural width and 320 px; all 33 installed diagram types represented",
+    "All 12 detailed showcase scenarios render at natural width and 320 px",
     "Invalid syntax, unsupported type, source/output limits, disabled links and blocked javascript URLs behave as expected",
     "parse/render, isolated core registration and lazy loading work",
     "CLI produces SVG/HTML, reports results and preserves existing output unless force is explicit",
@@ -19,7 +22,7 @@
   "command": "npm run verify",
   "limits": [
     "Not the upstream full test or fuzz suite",
-    "Not a visual audit of every example",
+    "Not a visual audit of all 591 captured examples",
     "No third-party MCP runtime verification",
     "No PNG or PDF export verification"
   ],
@@ -28,12 +31,26 @@
     "package-lock.json": "b727a10eac69ae149769fde8f7a6e9c49c15a239295712d7918747b0054d594f",
     "assets/examples.json": "f5b7c749bd2895a93b84d6d999ce12bbc04a24e0607e985777cc7761b52d6703",
     "assets/theme.css": "52c66d8c8fc10bd809ae6c99ebc615baee489223096f8cc7a2f5f0ded6d6f64e",
-    "scripts/render.mjs": "fba3b111af9c5938763d4ba24c4a178ffc8ae2413106d284ee180d237be38eff",
-    "scripts/render-worker.mjs": "fea452ed9f31ee279662d1fcb8103c76d923e7dbd4fe276de7b30e7b53e5ca2f",
-    "scripts/verify.mjs": "52f15d81b6d49a147f6c0ef794f675cdfd2cb6c439a2a710a7dc927d1c97102f",
+    "assets/readme/theme.css": "0d6f0e749099ce749ec41dc5ec9ebe556f289feeac516182d4b59059d20c0c5f",
     "scripts/catalog.mjs": "8f8364b5d6f3266b575d4b9927bb4a70780120e28e0c268a622f000137fcabae",
-    "scripts/showcase.mjs": "02f35446ae65d04168c09068810e53d3af267ee81bfdba757873ab918aff707d",
+    "scripts/render-worker.mjs": "fea452ed9f31ee279662d1fcb8103c76d923e7dbd4fe276de7b30e7b53e5ca2f",
+    "scripts/render.mjs": "fba3b111af9c5938763d4ba24c4a178ffc8ae2413106d284ee180d237be38eff",
+    "scripts/showcase.mjs": "04229c3679277d7833a3812d70f0077464a26782d8341ce49b5e98115a0cf1b5",
+    "scripts/verify.mjs": "fdecc500cc16f3e46dda2086affe7702b75beeb942450563310fa980940b0615",
+    "examples/branching-strategy.mmd": "f63cbd708871f6d1b8f7ba857cb41f10bffa5ca1dfab6aef5298ff72d35dda01",
+    "examples/checkout-saga.mmd": "e90defd14c1dca292368620d642a58363a673ab5766ef724af8d572911e49831",
+    "examples/commerce-domain.mmd": "46cd4962264330650a3cf51b9a4ceee3370924853a47ecf66371f6693719401b",
+    "examples/delivery-pipeline.mmd": "dfdb00d1948b8b2d9260642b58c1751004f0018021f00673a5795a03accb512e",
+    "examples/energy-budget.mmd": "05a5c89a7bee12e0d6ccd7762df98195a89c2b1586705b83429decda77e88af1",
+    "examples/order-handoff.mmd": "0cb98b8b5ede859c1f2e94f67a76504306f6a99e82b7be005214da4108adcee3",
+    "examples/platform-topology.mmd": "25f0161d077e5a3563c193168d99dcd34e6a5f7b21b3d874b9d85d9441bafe07",
+    "examples/release-readiness.mmd": "1fa944f04e1265e8f3b6bd2882952b6d5bc922cc3677f1989f561a684a5d138d",
+    "examples/release-roadmap.mmd": "9561120160f0675e03935f7d1c855b18f979e26310e507cd23ec39de8e4680ea",
+    "examples/requirement-trace.mmd": "14f647a37250a97fa3732d7fba52bcbf29b1c3fb4fd12a6fd75d56d5c4245038",
+    "examples/returns-process.mmd": "a744c22da20dd4ec2ffda1a9f411d9872c7bb909c1f816a915b20a764fceda41",
     "examples/review-flow.mmd": "17aeb816a22902578647bbf07e5b0a3a1cb9ada1098f7aa832245032feaf5b45",
-    "examples/order-handoff.mmd": "0cb98b8b5ede859c1f2e94f67a76504306f6a99e82b7be005214da4108adcee3"
+    "examples/service-latency.mmd": "2783a461eabd4365d13906e8441bbf0abc6a2ec2e80057f60f2b39465fc92604",
+    "examples/showcase.json": "cb96da5765f4111f1fe314f07cf1f7c557dd9bdf6339f116f32d7c1980ee3576",
+    "examples/subscription-lifecycle.mmd": "91d73c808d5f0931e956223f37855ca29e31792e0f78cb6cb155bb42be09e259"
   }
 }

@@ -1,0 +1,40 @@
+flowchart LR
+  accTitle: 多环境软件交付流水线
+  accDescr: 从提交进入并行检查，构建签名制品，经过预发布验收后灰度发布；失败走修复或回滚路径。
+  subgraph source[代码与验证]
+    direction TB
+    commit[提交变更] --> review{代码审核}
+    review -->|退回| fix[修复问题]
+    fix --> commit
+    review -->|通过| unit[单元测试]
+    review -->|通过| types[类型检查]
+    review -->|通过| scan[依赖扫描]
+    unit --> gate{质量门禁}
+    types --> gate
+    scan --> gate
+  end
+  subgraph artifact[制品与预发布]
+    direction TB
+    build[构建制品] --> sign[签名与摘要]
+    sign --> registry[(制品仓库)]
+    registry --> staging[部署预发布]
+    staging --> smoke[冒烟与契约测试]
+    smoke --> accept{验收通过}
+  end
+  subgraph release[渐进发布与反馈]
+    direction TB
+    canary[灰度 5%] --> metrics{指标正常}
+    metrics -->|是| expand[逐步扩大流量]
+    expand --> production[全量发布]
+    metrics -->|否| rollback[恢复上一制品]
+    production --> observe[监控与审计]
+  end
+  gate -->|通过| build
+  gate -->|失败| fix
+  accept -->|通过| canary
+  accept -->|失败| fix
+  rollback -.-> fix
+  classDef good fill:#e5f1eb,stroke:#559478,color:#204b3a
+  classDef risk fill:#fbede7,stroke:#cc765b,color:#743e2d
+  class production,observe good
+  class fix,rollback risk

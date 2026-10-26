@@ -1,0 +1,38 @@
+sequenceDiagram
+  autonumber
+  actor Customer as 顾客
+  participant API as 订单 API
+  participant Stock as 库存
+  participant Pay as 支付
+  participant Bus as 消息总线
+  participant Worker as 履约服务
+  Customer->>API: 提交订单 / 幂等键
+  activate API
+  API->>API: 查询幂等记录
+  alt 请求已处理
+    API-->>Customer: 返回已有订单
+  else 首次请求
+    API->>Stock: 预占库存
+    activate Stock
+    Stock-->>API: 预占成功 / 过期时间
+    deactivate Stock
+    API->>Pay: 创建支付单
+    Pay-->>API: 支付凭证
+    API-->>Customer: 待支付订单
+  end
+  deactivate API
+  Customer->>Pay: 完成支付
+  Pay-)Bus: 支付成功事件
+  Bus->>API: 投递支付结果
+  activate API
+  alt 订单仍可履约
+    API->>Stock: 确认扣减
+    API-)Bus: 订单已确认
+    Bus->>Worker: 创建履约任务
+    Worker-->>Bus: 任务已接收
+  else 库存预占已过期
+    API->>Pay: 发起补偿退款
+    API-)Bus: 订单取消事件
+  end
+  deactivate API
+  Note over API,Bus: 消费端按事件 ID 去重，失败进入重试队列

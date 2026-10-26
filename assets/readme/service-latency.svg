@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="896" viewBox="0 0 1200 896" role="img" aria-labelledby="board-title board-desc">
+  <title id="board-title">性能观察：同轴比较 P50 与 P95</title>
+  <desc id="board-desc">八个时间点 · 柱线叠加 · 单位与范围。使用 Pele 1.10.0 从 Mermaid 源码生成。</desc>
+  <rect width="1200" height="896" rx="12" fill="#fcfcfa"/>
+  <style>.pele {
+  --pele-bg: #fcfcfa;
+  --pele-fg: #242a32;
+  --pele-muted: #69737f;
+  --pele-line: #566170;
+  --pele-surface: #f0f3f6;
+  --pele-surface-alt: #e8edf1;
+  --pele-border: #a3afba;
+  --pele-accent: #c95d43;
+  --pele-critical: #c95d43;
+  --pele-error: #b84736;
+  --pele-series-1: #4e739c;
+  --pele-series-2: #d17956;
+  --pele-series-3: #57917e;
+  --pele-series-4: #b55f6b;
+  --pele-series-5: #8a7ca8;
+  --pele-series-6: #ba9b50;
+  --pele-series-7: #6d9fa2;
+  --pele-series-8: #87919d;
+  --pele-radius: 7px;
+  --pele-heading-weight: 600;
+  --pele-title-weight: 600;
+}
+</style>
+  <g font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif">
+    <text x="40" y="52" font-size="24" font-weight="600" fill="#c95d43">12</text>
+    <text x="92" y="52" font-size="30" font-weight="600" fill="#242a32">性能观察：同轴比较 P50 与 P95</text>
+    <text x="92" y="82" font-size="18" fill="#69737f">八个时间点 · 柱线叠加 · 单位与范围</text>
+    <text x="1160" y="50" text-anchor="end" font-size="16" fill="#69737f">XYCHART</text>
+  </g>
+  <path d="M40 102 H1160" stroke="#dde3e8"/>
+  <g transform="translate(75 124) scale(1.5)"><svg xmlns="http://www.w3.org/2000/svg" class="pele pele-xychart" viewBox="0 0 700 500" width="700" height="500" style="--_bg:var(--pele-bg,#fff);--_fg:var(--pele-fg,#1f1f1f);--_m:var(--pele-muted,#6e6e6e);--_l:var(--pele-line,#1f1f1f);--_s:var(--pele-surface,#f3f3f3);--_a:var(--pele-surface-alt,#e6e6e6);--_b:var(--pele-border,#8a8a8a);--_c:var(--pele-accent,#5b7bd5);color:var(--_fg);--_tw:var(--pele-title-weight,bold);--_fm:var(--pele-font-mono,monospace);font:20px sans-serif;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;font-family:var(--pele-font,Segoe UI, Microsoft YaHei, PingFang SC, sans-serif)" fill="var(--_fg)" role="graphics-document document" aria-roledescription="xychart"><text class="pele-title" font-weight="var(--_tw)" text-anchor="middle" xml:space="preserve"><tspan x="350" y="30">示例服务延迟：P50 与 P95</tspan></text><path class="pele-grid" d="M81.02,457H692M81.02,391.42H692M81.02,325.83H692M81.02,260.25H692M81.02,194.67H692M81.02,129.08H692M81.02,63.5H692" stroke="var(--_a)"/><g class="pele-plot"><g class="pele-series pele-bars" fill="var(--pele-series-1,#4c78a8)"><rect x="92.48" y="362.56" width="53.46" height="94.44"/><rect x="168.85" y="354.69" width="53.46" height="102.31"/><rect x="245.22" y="344.2" width="53.46" height="112.8"/><rect x="321.6" y="302.22" width="53.46" height="154.78"/><rect x="397.97" y="319.27" width="53.46" height="137.73"/><rect x="474.34" y="333.7" width="53.46" height="123.3"/><rect x="550.71" y="352.07" width="53.46" height="104.93"/><rect x="627.08" y="357.31" width="53.46" height="99.69"/></g><g class="pele-series pele-line" fill="var(--pele-series-2,#f58518)"><path d="M119.21,266.81L195.58,244.51L271.95,215.65L348.33,105.47L424.7,150.07L501.07,184.17L577.44,226.15L653.81,249.76" fill="none" stroke="var(--pele-series-2,#f58518)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="119.21" cy="266.81" r="3"/><circle cx="195.58" cy="244.51" r="3"/><circle cx="271.95" cy="215.65" r="3"/><circle cx="348.33" cy="105.47" r="3"/><circle cx="424.7" cy="150.07" r="3"/><circle cx="501.07" cy="184.17" r="3"/><circle cx="577.44" cy="226.15" r="3"/><circle cx="653.81" cy="249.76" r="3"/></g></g><path class="pele-axis" d="M81.02,63.5V457M81.02,457H692M81.02,457h-4M81.02,391.42h-4M81.02,325.83h-4M81.02,260.25h-4M81.02,194.67h-4M81.02,129.08h-4M81.02,63.5h-4M119.21,457v4M195.58,457v4M271.95,457v4M348.33,457v4M424.7,457v4M501.07,457v4M577.44,457v4M653.81,457v4" fill="none" stroke="var(--_b)"/><g class="pele-axis-labels" font-size="18" fill="var(--_m)"><text x="71.02" y="463.3" text-anchor="end">0</text><text x="71.02" y="397.72" text-anchor="end">50</text><text x="71.02" y="332.13" text-anchor="end">100</text><text x="71.02" y="266.55" text-anchor="end">150</text><text x="71.02" y="200.97" text-anchor="end">200</text><text x="71.02" y="135.38" text-anchor="end">250</text><text x="71.02" y="69.8" text-anchor="end">300</text><text x="119.21" y="484.8" text-anchor="middle">08:00</text><text x="195.58" y="484.8" text-anchor="middle">09:00</text><text x="271.95" y="484.8" text-anchor="middle">10:00</text><text x="348.33" y="484.8" text-anchor="middle">11:00</text><text x="424.7" y="484.8" text-anchor="middle">12:00</text><text x="501.07" y="484.8" text-anchor="middle">13:00</text><text x="577.44" y="484.8" text-anchor="middle">14:00</text><text x="653.81" y="484.8" text-anchor="middle">15:00</text></g><g class="pele-axis-titles" font-size="18"><g transform="translate(21.5,260.25) rotate(-90)"><text x="0" y="6.3" text-anchor="middle">延迟 / ms</text></g></g></svg></g>
+</svg>

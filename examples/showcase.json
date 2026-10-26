@@ -1,0 +1,14 @@
+[
+  { "id": "delivery-pipeline", "title": "从提交到灰度：软件交付链路", "type": "flowchart", "features": "并行检查 · 质量门禁 · 灰度与回滚", "fontSize": 24, "maxWidth": 1050, "config": { "flowchart": { "nodeSpacing": 20, "rankSpacing": 30 } } },
+  { "id": "platform-topology", "title": "订单平台：服务边界与数据通路", "type": "architecture", "features": "四层分组 · 定向端口 · 网格对齐", "fontSize": 20, "maxWidth": 1050 },
+  { "id": "checkout-saga", "title": "支付 Saga：异步事件与补偿", "type": "sequence", "features": "幂等请求 · 库存预占 · 异步消息 · 退款补偿", "fontSize": 20, "maxWidth": 1050 },
+  { "id": "commerce-domain", "title": "交易领域：订单、支付与退款模型", "type": "er", "features": "七类实体 · 主外键 · 基数 · 唯一约束", "fontSize": 20, "maxWidth": 1050 },
+  { "id": "subscription-lifecycle", "title": "订阅生命周期：续费、暂停与恢复", "type": "state", "features": "复合状态 · 宽限期 · 延迟取消 · 恢复", "fontSize": 20, "maxWidth": 1050 },
+  { "id": "release-roadmap", "title": "发布计划：依赖、关键路径与里程碑", "type": "gantt", "features": "三个阶段 · 十二项计划 · 工作日与依赖", "fontSize": 20, "maxWidth": 1050 },
+  { "id": "energy-budget", "title": "能源账本：来源、分配与损耗", "type": "sankey", "features": "三类供给 · 多级流量 · 数量守恒", "fontSize": 20, "maxWidth": 1050 },
+  { "id": "returns-process", "title": "跨部门退货：规则、验收与退款", "type": "swimlane", "features": "四个责任泳道 · 两级决策 · 异常路径", "fontSize": 20, "maxWidth": 1050 },
+  { "id": "release-readiness", "title": "发布准备：从契约到恢复证据", "type": "mindmap", "features": "五个检查维度 · 十五个执行条目", "fontSize": 22, "maxWidth": 1050 },
+  { "id": "requirement-trace", "title": "需求追踪：风险与实现责任", "type": "requirement", "features": "高风险需求 · 验证方式 · 满足与追踪关系", "fontSize": 20, "maxWidth": 1050 },
+  { "id": "branching-strategy", "title": "分支协作：并行开发与热修复", "type": "gitGraph", "features": "五条分支 · 热修复回灌 · 版本标签", "fontSize": 20, "maxWidth": 1050 },
+  { "id": "service-latency", "title": "性能观察：同轴比较 P50 与 P95", "type": "xychart", "features": "八个时间点 · 柱线叠加 · 单位与范围", "fontSize": 20, "maxWidth": 1050 }
+]

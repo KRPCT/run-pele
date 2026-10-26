@@ -1,0 +1,20 @@
+gantt
+  title 示例项目发布计划
+  dateFormat YYYY-MM-DD
+  axisFormat %m/%d
+  excludes weekends
+  section 方案与契约
+    需求边界确认     :done, scope, 2026-10-05, 3d
+    API 契约评审    :done, api, after scope, 3d
+    数据迁移设计     :done, schema, after scope, 4d
+  section 实现与联调
+    服务端实现       :active, backend, after api, 6d
+    客户端接入       :active, frontend, after api, 5d
+    数据迁移演练     :crit, migration, after schema, 4d
+    端到端联调       :crit, integration, after backend, 3d
+  section 验证与发布
+    性能和故障演练   :perf, after integration, 3d
+    安全复核         :security, after integration, 2d
+    发布评审         :milestone, review, after perf, 0d
+    灰度观察         :crit, canary, after review, 2d
+    全量上线         :milestone, launch, after canary, 0d

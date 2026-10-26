@@ -1,0 +1,36 @@
+<svg data-theme="light" xmlns="http://www.w3.org/2000/svg" class="pele pele-flowchart" viewBox="0 0 587 152" width="587" height="152" style="max-width:100%;height:auto;--_bg:var(--pele-bg,#fff);--_fg:var(--pele-fg,#1f1f1f);--_m:var(--pele-muted,#6e6e6e);--_l:var(--pele-line,#1f1f1f);--_s:var(--pele-surface,#f3f3f3);--_a:var(--pele-surface-alt,#e6e6e6);--_b:var(--pele-border,#8a8a8a);--_c:var(--pele-accent,#5b7bd5);color:var(--_fg);--_r:var(--pele-radius,4px);--_fm:var(--pele-font-mono,monospace);font:16px sans-serif;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;font-family:var(--pele-font,sans-serif)" fill="var(--_fg)" role="graphics-document document" aria-roledescription="flowchart" aria-labelledby="readme-review-flow-1-title" aria-describedby="readme-review-flow-1-desc"><style>.pele {
+  --pele-bg: #ffffff;
+  --pele-fg: #1f1f1f;
+  --pele-muted: #6e6e6e;
+  --pele-line: #1f1f1f;
+  --pele-surface: #f3f3f3;
+  --pele-surface-alt: #e6e6e6;
+  --pele-border: #8a8a8a;
+  --pele-accent: #5b7bd5;
+  --pele-critical: #e45756;
+  --pele-error: #e45756;
+  background: var(--pele-bg);
+}
+.pele[data-theme="dark"] {
+  --pele-bg: #17191c;
+  --pele-fg: #e7e9ec;
+  --pele-muted: #a8aeb7;
+  --pele-line: #c4cad2;
+  --pele-surface: #252930;
+  --pele-surface-alt: #30363e;
+  --pele-border: #818b99;
+  --pele-accent: #93b7ff;
+}
+@media (prefers-color-scheme: dark) {
+  .pele[data-theme="auto"] {
+    --pele-bg: #17191c;
+    --pele-fg: #e7e9ec;
+    --pele-muted: #a8aeb7;
+    --pele-line: #c4cad2;
+    --pele-surface: #252930;
+    --pele-surface-alt: #30363e;
+    --pele-border: #818b99;
+    --pele-accent: #93b7ff;
+  }
+}
+</style><title id="readme-review-flow-1-title">Review and publish a document</title><desc id="readme-review-flow-1-desc">A draft goes through review. Approved drafts are published; other drafts return for revision.</desc><g class="pele-edges" fill="none" stroke="var(--_l)" stroke-linecap="round"><g class="pele-edge" data-id="L_draft_review_0"><path d="M131.14,85.91L172.14,85.91"/><path class="pele-marker" d="M179.14,85.91L171.14,89.27L171.14,82.55Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_review_publish_0"><path d="M312.03,78.61L325.03,78.61C334.62,78.61 334.62,32 344.21,32L483.34,32"/><path class="pele-marker" d="M490.34,32L482.34,35.36L482.34,28.64Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_review_revise_0"><path d="M309.8,94.61L322.8,94.61C333.5,94.61 333.5,112 344.21,112L483.34,112"/><path class="pele-marker" d="M490.34,112L482.34,115.36L482.34,108.64Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_revise_review_0"><path d="M490.34,132L477.34,132C455.26,132 455.26,132.5 433.18,132.5L373.87,132.5C335.53,132.5 335.53,110.61 297.2,110.61L291.2,110.61"/><path class="pele-marker" d="M284.2,110.61L292.2,107.25L292.2,113.97Z" fill="var(--_l)" stroke="none"/></g></g><g class="pele-edge-labels" font-size="14"><g class="pele-edge-label" data-id="L_review_publish_0"><rect x="387.46" y="21.5" width="32.12" height="21" rx="3" fill="var(--_bg)"/><text x="403.52" y="36.9" text-anchor="middle">Yes</text></g><g class="pele-edge-label" data-id="L_review_revise_0"><rect x="346.21" y="101.5" width="114.62" height="21" rx="3" fill="var(--_bg)"/><text x="403.52" y="116.9" text-anchor="middle">Changes needed</text></g></g><g class="pele-nodes"><g class="pele-node pele-shape-rect" data-id="draft" transform="translate(69.57,85.91)"><rect x="-61.57" y="-24" width="123.14" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="5.6" text-anchor="middle">Write a draft</text></g><g class="pele-node pele-shape-diam" data-id="review" transform="translate(251.42,85.91)"><polygon points="0,-45.18 72.29,0 0,45.18 -72.29,0" fill="var(--_s)" stroke="var(--_b)"/><text class="pele-label" x="0" y="5.6" text-anchor="middle">Approved?</text></g><g class="pele-node pele-shape-rect" data-id="publish" transform="translate(534.57,32)"><rect x="-44.23" y="-24" width="88.46" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="5.6" text-anchor="middle">Publish</text></g><g class="pele-node pele-shape-rect" data-id="revise" transform="translate(532.78,120)"><rect x="-42.45" y="-24" width="84.9" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="5.6" text-anchor="middle">Revise</text></g></g></svg>

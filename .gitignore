@@ -1,0 +1,5 @@
+node_modules/
+.scratch/
+/archives/
+__pycache__/
+*.pyc

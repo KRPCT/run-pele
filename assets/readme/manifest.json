@@ -1,0 +1,23 @@
+{
+  "renderer": "pele",
+  "version": "1.10.0",
+  "command": "npm run showcase",
+  "outputs": [
+    {
+      "source": "examples/review-flow.mmd",
+      "output": "assets/readme/review-flow.svg",
+      "type": "flowchart",
+      "width": 587,
+      "height": 152,
+      "bytes": 4471
+    },
+    {
+      "source": "examples/order-handoff.mmd",
+      "output": "assets/readme/order-handoff.svg",
+      "type": "swimlane",
+      "width": 584,
+      "height": 304,
+      "bytes": 5129
+    }
+  ]
+}

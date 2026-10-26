@@ -1,0 +1,7 @@
+flowchart LR
+  accTitle: Review and publish a document
+  accDescr: A draft goes through review. Approved drafts are published; other drafts return for revision.
+  draft["Write a draft"] --> review{"Approved?"}
+  review -->|Yes| publish["Publish"]
+  review -->|Changes needed| revise["Revise"]
+  revise --> review

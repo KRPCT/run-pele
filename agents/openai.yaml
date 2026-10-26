@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run Pele"
+  short_description: "Pele 图表编写、语法校验、SVG 渲染、主题与应用集成"
+  default_prompt: "使用 $run-pele 为我的需求选择合适图型，编写 Mermaid，实际渲染并交付可编辑源文件和 SVG。"

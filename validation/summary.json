@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "pele": "1.10.0",
+  "types": 33,
+  "examples": 591,
+  "renderCalls": 1182,
+  "checks": [
+    "All 591 captured examples render at natural width and 320 px; all 33 installed diagram types represented",
+    "Invalid syntax, unsupported type, source/output limits, disabled links and blocked javascript URLs behave as expected",
+    "parse/render, isolated core registration and lazy loading work",
+    "CLI produces SVG/HTML, reports results and preserves existing output unless force is explicit",
+    "Markdown extraction avoids nested examples, maps error lines, rejects empty work and terminates an expired render worker"
+  ],
+  "verified_date": "2026-10-26",
+  "environment": {
+    "node": "v22.15.0",
+    "platform": "Windows"
+  },
+  "command": "npm run verify",
+  "limits": [
+    "Not the upstream full test or fuzz suite",
+    "Not a visual audit of every example",
+    "No third-party MCP runtime verification",
+    "No PNG or PDF export verification"
+  ],
+  "input_sha256": {
+    "package.json": "7fc85032dfdfa2b7c7a7903b1827b82064e571cde7c588a3d3d9318d37a8b7b8",
+    "package-lock.json": "b727a10eac69ae149769fde8f7a6e9c49c15a239295712d7918747b0054d594f",
+    "assets/examples.json": "f5b7c749bd2895a93b84d6d999ce12bbc04a24e0607e985777cc7761b52d6703",
+    "assets/theme.css": "52c66d8c8fc10bd809ae6c99ebc615baee489223096f8cc7a2f5f0ded6d6f64e",
+    "scripts/render.mjs": "fba3b111af9c5938763d4ba24c4a178ffc8ae2413106d284ee180d237be38eff",
+    "scripts/render-worker.mjs": "fea452ed9f31ee279662d1fcb8103c76d923e7dbd4fe276de7b30e7b53e5ca2f",
+    "scripts/verify.mjs": "52f15d81b6d49a147f6c0ef794f675cdfd2cb6c439a2a710a7dc927d1c97102f",
+    "scripts/catalog.mjs": "8f8364b5d6f3266b575d4b9927bb4a70780120e28e0c268a622f000137fcabae",
+    "scripts/showcase.mjs": "02f35446ae65d04168c09068810e53d3af267ee81bfdba757873ab918aff707d",
+    "examples/review-flow.mmd": "17aeb816a22902578647bbf07e5b0a3a1cb9ada1098f7aa832245032feaf5b45",
+    "examples/order-handoff.mmd": "0cb98b8b5ede859c1f2e94f67a76504306f6a99e82b7be005214da4108adcee3"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "run-pele-skill",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Render Mermaid diagrams to SVG and HTML with Pele, with a reusable skill, local CLI and Markdown validation.",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/KRPCT/run-pele.git" },
+  "homepage": "https://github.com/KRPCT/run-pele#readme",
+  "bugs": { "url": "https://github.com/KRPCT/run-pele/issues" },
+  "keywords": ["pele", "mermaid", "svg", "diagrams-as-code", "agent-skill", "markdown"],
+  "engines": { "node": ">=20" },
+  "scripts": { "verify": "node scripts/verify.mjs", "showcase": "node scripts/showcase.mjs" },
+  "dependencies": { "pele": "1.10.0" }
+}

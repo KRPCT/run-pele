@@ -1,0 +1,16 @@
+swimlane-beta LR
+  accTitle: 订单交接流程
+  accDescr: 客户下单后交给仓库拣货和发货，发货完成后交给财务开票。
+  subgraph Customer [客户]
+    order["提交订单"]
+  end
+  subgraph Warehouse [仓库]
+    pick["拣货"]
+    ship["发货"]
+  end
+  subgraph Finance [财务]
+    invoice["开具发票"]
+  end
+  order -->|订单交接| pick
+  pick --> ship
+  ship -->|发货信息| invoice

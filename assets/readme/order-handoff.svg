@@ -1,0 +1,36 @@
+<svg data-theme="light" xmlns="http://www.w3.org/2000/svg" class="pele pele-swimlane" viewBox="0 0 584 304" width="584" height="304" style="max-width:100%;height:auto;--_bg:var(--pele-bg,#fff);--_fg:var(--pele-fg,#1f1f1f);--_m:var(--pele-muted,#6e6e6e);--_l:var(--pele-line,#1f1f1f);--_s:var(--pele-surface,#f3f3f3);--_a:var(--pele-surface-alt,#e6e6e6);--_b:var(--pele-border,#8a8a8a);--_c:var(--pele-accent,#5b7bd5);color:var(--_fg);--_r:var(--pele-radius,4px);--_fm:var(--pele-font-mono,monospace);font:16px sans-serif;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;font-family:var(--pele-font,sans-serif)" fill="var(--_fg)" role="graphics-document document" aria-roledescription="swimlane" aria-labelledby="readme-order-handoff-1-title" aria-describedby="readme-order-handoff-1-desc"><style>.pele {
+  --pele-bg: #ffffff;
+  --pele-fg: #1f1f1f;
+  --pele-muted: #6e6e6e;
+  --pele-line: #1f1f1f;
+  --pele-surface: #f3f3f3;
+  --pele-surface-alt: #e6e6e6;
+  --pele-border: #8a8a8a;
+  --pele-accent: #5b7bd5;
+  --pele-critical: #e45756;
+  --pele-error: #e45756;
+  background: var(--pele-bg);
+}
+.pele[data-theme="dark"] {
+  --pele-bg: #17191c;
+  --pele-fg: #e7e9ec;
+  --pele-muted: #a8aeb7;
+  --pele-line: #c4cad2;
+  --pele-surface: #252930;
+  --pele-surface-alt: #30363e;
+  --pele-border: #818b99;
+  --pele-accent: #93b7ff;
+}
+@media (prefers-color-scheme: dark) {
+  .pele[data-theme="auto"] {
+    --pele-bg: #17191c;
+    --pele-fg: #e7e9ec;
+    --pele-muted: #a8aeb7;
+    --pele-line: #c4cad2;
+    --pele-surface: #252930;
+    --pele-surface-alt: #30363e;
+    --pele-border: #818b99;
+    --pele-accent: #93b7ff;
+  }
+}
+</style><title id="readme-order-handoff-1-title">订单交接流程</title><desc id="readme-order-handoff-1-desc">客户下单后交给仓库拣货和发货，发货完成后交给财务开票。</desc><g class="pele-clusters"><g class="pele-cluster pele-lane" data-id="Finance"><rect x="8" y="200" width="568" height="96" fill="none" stroke="var(--_b)"/><rect x="8" y="200" width="40" height="96" fill="var(--_a)" stroke="var(--_b)"/><g transform="rotate(-90 28 248)"><text class="pele-cluster-label" fill="var(--_m)" x="28" y="253.6" text-anchor="middle">财务</text></g></g><g class="pele-cluster pele-lane" data-id="Warehouse"><rect x="8" y="104" width="568" height="96" fill="none" stroke="var(--_b)"/><rect x="8" y="104" width="40" height="96" fill="var(--_a)" stroke="var(--_b)"/><g transform="rotate(-90 28 152)"><text class="pele-cluster-label" fill="var(--_m)" x="28" y="157.6" text-anchor="middle">仓库</text></g></g><g class="pele-cluster pele-lane" data-id="Customer"><rect x="8" y="8" width="568" height="96" fill="none" stroke="var(--_b)"/><rect x="8" y="8" width="40" height="96" fill="var(--_a)" stroke="var(--_b)"/><g transform="rotate(-90 28 56)"><text class="pele-cluster-label" fill="var(--_m)" x="28" y="61.6" text-anchor="middle">客户</text></g></g></g><g class="pele-edges" fill="none" stroke="var(--_l)" stroke-linecap="round"><g class="pele-edge" data-id="L_order_pick_0"><path d="M122,80L122,132C122,144.4 129.6,152 142,152L213,152"/><path class="pele-marker" d="M220,152L212,155.36L212,148.64Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_pick_ship_0"><path d="M288,152L329,152"/><path class="pele-marker" d="M336,152L328,155.36L328,148.64Z" fill="var(--_l)" stroke="none"/></g><g class="pele-edge" data-id="L_ship_invoice_0"><path d="M370,176L370,228C370,240.4 377.6,248 390,248L445,248"/><path class="pele-marker" d="M452,248L444,251.36L444,244.64Z" fill="var(--_l)" stroke="none"/></g></g><g class="pele-edge-labels" font-size="14"><g class="pele-edge-label" data-id="L_order_pick_0"><rect x="139" y="141.5" width="64" height="21" rx="3" fill="var(--_bg)"/><text x="171" y="156.9" text-anchor="middle">订单交接</text></g><g class="pele-edge-label" data-id="L_ship_invoice_0"><rect x="379" y="237.5" width="64" height="21" rx="3" fill="var(--_bg)"/><text x="411" y="252.9" text-anchor="middle">发货信息</text></g></g><g class="pele-nodes"><g class="pele-node pele-shape-rect" data-id="order" transform="translate(122,56)"><rect x="-50" y="-24" width="100" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="5.6" text-anchor="middle">提交订单</text></g><g class="pele-node pele-shape-rect" data-id="pick" transform="translate(254,152)"><rect x="-34" y="-24" width="68" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="5.6" text-anchor="middle">拣货</text></g><g class="pele-node pele-shape-rect" data-id="ship" transform="translate(370,152)"><rect x="-34" y="-24" width="68" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="5.6" text-anchor="middle">发货</text></g><g class="pele-node pele-shape-rect" data-id="invoice" transform="translate(502,248)"><rect x="-50" y="-24" width="100" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"/><text class="pele-label" x="0" y="5.6" text-anchor="middle">开具发票</text></g></g></svg>
